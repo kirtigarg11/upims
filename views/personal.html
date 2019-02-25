@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form method="get" action="personal"  >
+<div class="container">
+ 
+         
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Father'sName</th>
+        <th>MOtherName</th>
+        <th>Roll_Num</th>
+        <th>Number</th>
+        <th>Fa_number</th>
+        <th>Fathers_occupation </th>
+        <th>mothers_occupation</th>
+        <th>Current_add</th>
+        <th>Per_add</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- <% if (res !=undefined && res.length!=0) { %> -->
+        <td><%=res[0].name %></td>
+        <td><%=res[0].fname %></td>
+        <td><%=res[0].mname%></td>
+        <td><%=res[0].uni_rollno %></td>
+        <td><%=res[0].cont_num %></td>
+        <td><%=res[0].fnumber %></td>
+        <td><%=res[0].foccu%> </td>
+        <td><%=res[0].moccu%> </td>
+        <td><%=res[0].cur_add%></td>
+        <td><%=res[0].per_add%></td>
+        <!-- <% } %> -->
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<form action="/app/personal" class="modal-content animate"  method="post" enctype="multipart/form-data">
+                            
+                          
+  <div class="container" align="center">
+     <label for="FNAME"><b>First Name</b></label>
+    <input type="text" placeholder="New employee fname" name="name"  value=<%=res[0].name %> class="form-control" required>
+      <br> 
+     
+      <label for="lNAME"><b>Fathers Name</b></label>
+      <input type="text" placeholder="New employee lname" name="fname" value=<%=res[0].fname %> class="form-control" >
+        <br>
+
+        <label for="lNAME"><b>Mothers Name</b></label>
+        <input type="text" placeholder="New employee lname" name="mname" value=<%=res[0].mname %> class="form-control" >
+          <br>
+          
+         
+          <label for="lNAME"><b>contactNumber</b></label>
+        <input type="text" placeholder="New employee lname" name="cont_num" value=<%=res[0].cont_num %> class="form-control" >
+          <br>
+          
+          <label for="lNAME"><b> FatherNumber</b></label>
+        <input type="text" placeholder="New employee lname" name="fnumber" value=<%=res[0].fnumber %> class="form-control" >
+          <br>
+          <label for="lNAME"><b> FatherNumber</b></label>
+        <input type="text" placeholder="New employee lname" name="foccu" value=<%=res[0].foccu %> class="form-control" >
+          <br>
+          <label for="lNAME"><b> Fathers_occupation</b></label>
+        <input type="text" placeholder="New employee lname" name="moccu" value=<%=res[0].moccu %> class="form-control" >
+          <br>
+          <label for="lNAME"><b> mothers_occupation</b></label>
+        <input type="text" placeholder="New employee lname" name="cur_add" value=<%=res[0].cur_add %> class="form-control" >
+          <br>
+          <label for="lNAME"><b> Current_add</b></label>
+          <input type="text" placeholder="New employee lname" name="per_add" value=<%=res[0].per_add %> class="form-control" >
+            <br>
+            
+        <button type="submit" >update</button>
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch
+    Modal Register Form</a>
+</div>
+</form>
+</div>
+
+</body>
+</html>

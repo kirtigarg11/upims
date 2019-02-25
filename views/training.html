@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>   
+</head>
+<body>
+  console.log(1);
+    <form method="get" action="training"  >
+<div class="container">
+ 
+         
+  <table class="table" id="myTable">
+    <thead>
+      <tr>
+        <th>comp_domain</th>
+        <th>comp_name</th>
+        <th>trng_area</th>
+        <th>trng_dur</th>
+        <th>trng_des</th>
+        <th>mntr</th>
+        <th>trng_pro_des </th>
+        <th>pro_name</th>
+        <th>team</th>
+     
+      </tr>
+    </thead>
+    <tbody> 
+      <% for(i in res){%>
+      <tr>
+        <!-- <% if (res !=undefined && res.length!=0) { %> -->
+        <td><%=res[i].comp_domain %></td>
+        <td ><%=res[i].comp_name %></td>
+        <td ><%=res[i].trng_area%></td>
+        <td ><%=res[i].trng_dur %></td>
+        <td ><%=res[i].trng_des %></td>
+        <td ><%=res[i].mntr %></td>
+        <td ><%=res[i].trng_pro_des%> </td>
+        <td ><%=res[i].pro_name%> </td>
+        <td ><%=res[i].team%></td>
+      <td>   <button type="button" class="bg" value= '<%=res[i].id %>' data-toggle="modal" data-target="#myModal">Open Modal</button>
+      </td>
+        <!-- <% } %> -->
+      </tr>
+    <%} %>
+    </tbody>
+  </table>
+</div>
+</form>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <form action="/app/training" class="modal-content animate"  method="post" enctype="multipart/form-data">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <label for="comp_domain"><b>comp_domain</b></label>
+        <input type="text"  name="comp_domain"  id="comp_domain1" value="" class="form-control" required>
+          <br> 
+          <label for="comp_name"><b>comp_name</b></label>
+          <input type="text"  name="comp_name" id="comp_name1" value="" class="form-control" required>
+            <br>
+            <label for="trng_area"><b>trng_area</b></label>
+          <input type="text"  name="trng_area" id="trng_area1" value="" class="form-control" required>
+            <br>
+            <label for="trng_dur"><b>trng_dur</b></label>
+          <input type="text"  name="trng_dur" id="trng_dur1" value="" class="form-control" required>
+            <br>
+            <label for="trng_des"><b>trng_des</b></label>
+          <input type="text"  name="trng_des" id="trng_des1" value="" class="form-control" required>
+            <br>
+            <label for="mntr"><b>mntr</b></label>
+          <input type="text"  name="mntr" id="mntr1" value="" class="form-control" required>
+            <br>
+            <label for="trng_pro_des"><b>trng_pro_des</b></label>
+          <input type="text"  name="trng_pro_des" id="trng_pro_des1" value="" class="form-control" required>
+            <br>
+            <label for="pro_name"><b>pro_name</b></label>
+          <input type="text"  name="pro_name" id="pro_name1" value="" class="form-control" required>
+            <br>
+            <label for="team"><b>team</b></label>
+          <input type="text"  name="team" id="team1" value="" class="form-control" required>
+            <br>
+           
+                    </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn-onet" name="update" id="update1" value="" >Close</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+ <br>
+ <br>
+ <br>
+ <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add">Open Small Modal</button>
+
+ <div class="modal fade" id="add" role="dialog">
+    <div class="modal-dialog">
+      <form action="/app/training" class="modal-content animate"  method="post" enctype="multipart/form-data">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <label for="comp_domain"><b>comp_domain</b></label>
+          <input type="text"  name="comp_domain"    class="form-control" required>
+            <br> 
+            <label for="comp_name"><b>comp_name</b></label>
+            <input type="text"  name="comp_name"  class="form-control" required>
+              <br>
+              <label for="trng_area"><b>trng_area</b></label>
+            <input type="text"  name="trng_area"  value="" class="form-control" required>
+              <br>
+              <label for="trng_dur"><b>trng_dur</b></label>
+            <input type="text"  name="trng_dur"  value="" class="form-control" required>
+              <br>
+              <label for="trng_des"><b>trng_des</b></label>
+            <input type="text"  name="trng_des"  value="" class="form-control" required>
+              <br>
+              <label for="mntr"><b>mntr</b></label>
+            <input type="text"  name="mntr"  value="" class="form-control" required>
+              <br>
+              <label for="trng_pro_des"><b>trng_pro_des</b></label>
+            <input type="text"  name="trng_pro_des"  value="" class="form-control" required>
+              <br>
+              <label for="pro_name"><b>pro_name</b></label>
+            <input type="text"  name="pro_name"  value="" class="form-control" required>
+              <br>
+              <label for="team"><b>team</b></label>
+            <input type="text"  name="team"  value="" class="form-control" required>
+              <br>
+             
+                      </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-onet" name="add" id="add" >add</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+ 
+<script type="text/javascript">
+  $(document).ready(function(){
+   
+      // Get combined text contents of all paragraphs
+      
+        $('.bg').click(function (e) {
+         // console.log(e.target.getAttribute('value'));
+          var a=e.target.getAttribute('value');
+      //  var comp_domain=  $('#comp_name1').html();
+     // console.log(a);
+     
+
+
+ $("#myTable").on('click','.bg',function(){
+         // get the current row
+         var currentRow=$(this).closest("tr"); 
+         
+         var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+         var col2=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
+         var col3=currentRow.find("td:eq(2)").text(); // get current row 3rd TD
+         var col4=currentRow.find("td:eq(3)").text();
+         var col5=currentRow.find("td:eq(4)").text();
+         var col6=currentRow.find("td:eq(5)").text();
+         var col7=currentRow.find("td:eq(6)").text();
+         var col8=currentRow.find("td:eq(7)").text();
+         var col9=currentRow.find("td:eq(8)").text();
+        //var col10=currentRow.find("td:eq(9)").text();
+        console.log(a);
+     //$("#comp_domain").html(col1);
+  $("#comp_domain1").val(col1);
+  $("#comp_name1").val(col2);
+  $("#trng_area1 ").val(col3);
+  $("#trng_dur1 ").val(col4);
+  $("#trng_des1 ").val(col5);
+  $("#mntr1 ").val(col6);
+  $("#trng_pro_des1").val(col7);
+  $("#pro_name1").val(col8);
+  $("#team1").val(col9);
+  $("#update1").val(a);
+    });
+
+  
+});
+
+
+     
+
+      });
+   
+ </script>
+
+</body>
+
+ </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form method="get" action="educational"  >
+<div class="container">
+ 
+         
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Gap</th>
+        <th>pursuing Qualification</th>
+        <th>10_board</th>
+        <th>10_marks</th>
+        <th>10_year</th>
+        <!-- <th>DOB</th> -->
+        <th>12_board </th>
+        <th>12_marks</th>
+        <th>12_year</th>
+        <th>course</th>
+        <th>branch</th>
+        <th>semester</th>
+        <th>year</th>
+        <th>btech_agg</th>
+        <th>gender</th>
+        <!-- <th>year</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <% if (res1 !=undefined && res1.length!=0) { %> 
+           
+            <td><%=res1[0].gap%></td>
+            <td><%=res1[0].pur_quali %></td>
+            <td><%=res1[0].ten_board%></td>
+            <td><%=res1[0].ten_mrk %></td>
+            <td><%=res1[0].ten_year %></td>
+            <td><%=res1[0].twelve_board %></td>
+            <td><%=res1[0].twelve_mrk%> </td>
+            <td><%=res1[0].twelve_yr%> </td>
+            
+            <td><%=res1[0].course%></td>
+            <td><%=res1[0].branch%></td>
+            <td><%=res1[0].sem%></td>
+            <td><%=res1[0].yr%></td>
+            <td><%=res1[0].btech_agg%></td>
+            <td><%=res1[0].gen%></td>
+            
+           
+         <% } %>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+<form action="/app/educational" class="modal-content animate"  method="post" enctype="multipart/form-data">
+                            
+                          
+  <div class="container" align="center">
+     <label for="gap"><b>GAP</b></label>
+    <input type="text" placeholder="gap" name="gap"  value=<%=res1[0].gap %> class="form-control" required>
+      <br> 
+     
+      <label for="pur_quali"><b>Qualification</b></label>
+      <input type="text" placeholder="Qualification" name="pur_quali" value=<%=res1[0].pur_quali %> class="form-control" >
+        <br>
+
+        <label for="ten_board"><b>10 BOard</b></label>
+        <input type="text" placeholder="board" name="ten_board" value=<%=res1[0].ten_board %> class="form-control" >
+          <br>
+          
+         
+          <label for="ten_mrk"><b>10 mark</b></label>
+        <input type="text" placeholder="Marks" name="ten_mrk" value=<%=res1[0].ten_mrk %> class="form-control" >
+          <br>
+          
+          <label for="ten_year"><b> 10Year</b></label>
+        <input type="text" placeholder="10 year" name="fnumber" value=<%=res1[0].ten_year %> class="form-control" >
+          <br>
+          <label for="twelve_board"><b> 12 Board</b></label>
+        <input type="text" placeholder="12 board" name="twelve_board" value=<%=res1[0].twelve_board %> class="form-control" >
+          <br>
+          <label for="twelve_mrk"><b> 12 mark</b></label>
+        <input type="text" placeholder="12mark" name="twelve_mrk" value=<%=res1[0].twelve_mrk %> class="form-control" >
+          <br>
+          <label for=" twelve_yr"><b> 12 year</b></label>
+        <input type="text" placeholder="12 year" name="twelve_yr" value=<%=res1[0].twelve_yr %> class="form-control" >
+          <br>
+          <label for="course"><b> course</b></label>
+          <input type="text" placeholder="course" name="course" value=<%=res1[0].course %> class="form-control" >
+            <br>
+            <label for="course"><b> course</b></label>
+            <input type="text" placeholder="course" name="course" value=<%=res1[0].course %> class="form-control" >
+              <br>
+              <label for="branch"><b> branch</b></label>
+              <input type="text" placeholder="branch" name="branch" value=<%=res1[0].branch %> class="form-control" >
+                <br>
+                <label for="sem"><b> sem</b></label>
+                <input type="text" placeholder="sem" name="sem" value=<%=res1[0].sem %> class="form-control" >
+                  <br>
+                  <label for="yr"><b> yr</b></label>
+                  <input type="text" placeholder="yr" name="yr" value=<%=res1[0].yr %> class="form-control" >
+                    <br>
+
+                    <label for="btech_agg"><b> btech_agg</b></label>
+                  <input type="text" placeholder="btech_agg" name="btech_agg" value=<%=res1[0].btech_agg %> class="form-control" >
+                    <br>
+                    <label for="gen"><b> gen</b></label>
+                  <input type="text" placeholder="gen" name="gen" value=<%=res1[0].gen %> class="form-control" >
+                    <br>
+
+            
+        <button type="submit" >update</button>
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch
+    Modal Register Form</a>
+</div>
+</form>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+</html>
