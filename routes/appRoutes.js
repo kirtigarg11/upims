@@ -19,6 +19,6 @@ module.exports = function(app){
     router.get('/training',edudetailRoute.showtrainingdetail);
     router.post('/training',edudetailRoute.uptrainingdetail);
    
-    router.get('/training',edudetailRoute.insertTrainingDetail);
+    router.post('/training2',edudetailRoute.insertTrainingDetail);
     return router.middleware();
 }
