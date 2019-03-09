@@ -97,8 +97,10 @@ insert into tb_tpastudAsign(uid,tpa_id) values(1,1);
 insert into tb_tpastudAsign(uid,tpa_id) values(2,2);
 
 --------------------------------
-Doubt----
-insert into tb_notify(sndr,rcvr,body) values();
+insert into tb_notify(sndr_id,rcvr_id,comp_id) values(1,1,1);
+insert into tb_notify(sndr_id,rcvr_id,comp_id) values(2,2,1);
+insert into tb_notify(sndr_id,rcvr_id,comp_id) values(1,1,2);
+insert into tb_notify(sndr_id,rcvr_id,comp_id) values(2,2,2);
 
 -------------------------------
 
