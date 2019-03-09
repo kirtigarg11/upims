@@ -200,6 +200,8 @@ ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
 comp_name varchar(20) NOT NULL,
 comp_id int(10) unsigned NOT NULL,
 tpaassign_id int(10) unsigned NOT NULL,
+uid int(10) unsigned NOT NULL,
+foreign key(uid) references tb_user(useid),
 foreign key(comp_id) references tb_comp(comid),
 foreign key(tpaassign_id) references tb_tpastudAsign(tpsid)
 );
