@@ -189,9 +189,15 @@ foreign key(uid) references tb_user(useid)
 create table tb_notify(
 notid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-sndr varchar(20),
-rcvr varchar(20),
-body varchar(100)  
+sndr_id int(10) unsigned NOT NULL,
+sndr_name varchar(30) NOT NULL,
+rcvr_id int(10) unsigned NOT NULL,
+rcvr_name varchar(30) NOT NULL,
+comp_id int(10) unsigned NOT NULL,
+comp_name varchar(20) NOT NULL,
+visit_date date NOT NULL,
+pkg varchar(20) NOT NULL,
+job_des varchar(50) NOT NULL
 );
 
 create table tb_intrst_stud(
