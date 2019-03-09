@@ -190,14 +190,11 @@ create table tb_notify(
 notid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
 sndr_id int(10) unsigned NOT NULL,
-sndr_name varchar(30) NOT NULL,
 rcvr_id int(10) unsigned NOT NULL,
-rcvr_name varchar(30) NOT NULL,
 comp_id int(10) unsigned NOT NULL,
-comp_name varchar(20) NOT NULL,
-visit_date date NOT NULL,
-pkg varchar(20) NOT NULL,
-job_des varchar(50) NOT NULL
+foreign key(sndr_id) references tb_user(useid),
+foreign key(rcvr_id) references tb_user(useid),
+foreign key(comp_id) references tb_comp(comid)
 );
 
 create table tb_intrst_stud(
