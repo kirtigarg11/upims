@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>   
+</head>
+<body>
+
+<div>
+ 
+</div>
+
+        <form action="/app/placement" class="modal-content animate"  method="get" >
+                
+            <div class="container">
+ 
+              <h2>Filterable Table</h2>
+              <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+              <input id="myInput" type="text" placeholder="Search..">
+              <br><br>
+                <table class="table" id="myTable" >
+                  <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>course</th>
+                        <th>branch</th>
+                     <th>placement</th>
+                     <th>change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <%for(i in res){%>
+                    <tr>
+                        <td><%=res[i].name%></td>
+                        <td><%=res[i].course%></td>
+                        <td><%=res[i].branch%></td>
+                       <% if (res[i].placed==1) { %> 
+                      <td>placed</td>
+                     
+                    <% }else{ %> 
+                    
+                        <td>unplace</td>
+                    <%}%>
+                    <td><button type="button"  class="bg" value= '<%=res[i].id %>'data-toggle="modal" data-target="#myModal">Update</button></td>
+                    </tr>
+                   <%}%>
+                   
+                  </tbody>
+                </table>
+              </div>
+              </form>
+  
+ 
+                   
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+                                <form action="/app/placement" method="post">
+                                    <div class="form-check">
+                                      <label class="form-check-label" for="radio1">
+                                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value=1 >Placed
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <label class="form-check-label" for="radio2">
+                                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value=0>Unplace
+                                      </label>
+                                    </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit"  id="update"class="btn btn-default" name="update" value="">update</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+          
+                    
+                    <script type="text/javascript">
+                      $(document).ready(function(){
+                       
+                          // Get combined text contents of all paragraphs
+                          
+                            $('.bg').click(function (e) {
+                             // console.log(e.target.getAttribute('value'));
+                              var a=e.target.getAttribute('value');
+                              console.log(a);
+
+                         $("#update").val(a);
+                            });
+
+                            $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+                          });
+                        });
+                       
+                            </script>
+                
+    </body>
+
+    
+    </html>
