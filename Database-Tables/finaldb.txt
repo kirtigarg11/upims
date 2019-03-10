@@ -192,7 +192,6 @@ ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
 sndr_id int(10) unsigned NOT NULL,
 rcvr_id int(10) unsigned NOT NULL,
 comp_id int(10) unsigned NOT NULL,
-show_intrst tinyint(4) unsigned default 0,
 foreign key(sndr_id) references tb_user(useid),
 foreign key(rcvr_id) references tb_user(useid),
 foreign key(comp_id) references tb_comp(comid)
