@@ -1,0 +1,236 @@
+create table tb_user(
+useid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+name varchar(30) NOT NULL,
+cont_num varchar(10) NOT NULL UNIQUE,
+user_id varchar(30) NOT NULL UNIQUE,
+pass varchar(40) NOT NULL,
+role int(10),
+active tinyint(5),
+gender varchar(10),
+cur_add varchar(80) NOT NULL,
+per_add varchar(80) NOT NULL,
+picture blob
+);
+
+create table tb_stuD(
+stuid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+uid int(10) unsigned NOT NULL,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+email varchar(50) NOT NULL UNIQUE,
+fname varchar(30) NOT NULL,
+mname varchar(30) NOT NULL,
+summary varchar(100),
+fnumber varchar(10) NOT NULL UNIQUE,
+foccu varchar(30),
+moccu varchar(30),
+dob date NOT NULL,
+FOREIGN KEY(uid) references tb_user(useid)
+);
+
+create table tb_eduD(
+eduid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sid int(10) unsigned NOT NULL,
+gap tinyint(4) NOT NULL DEFAULT 0,
+pur_quali int(1) NOT NULL,
+ten_board varchar(15) NOT NULL,
+ten_mrk float(10) NOT NULL,
+ten_year int(4) NOT NULL,
+twe_board varchar(15) ,
+twe_mrk float(10),
+twe_yr int(4),
+pass_year int(5),
+course  varchar(15) NOT NULL,
+branch varchar(15),
+btech_agg float(10) NOT NULL,
+placed tinyint(5) DEFAULT 0,
+foreign key(sid) references tb_stuD(stuid)
+);
+
+
+create table tb_proj(
+proid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sid int(10) unsigned NOT NULL,
+pro_name varchar(30),
+dur tinyint(4),
+mntr varchar(30),
+tech varchar(50),
+tools varchar(50),
+langs varchar(50), 
+live tinyint(2) default '0',
+des_of_pro varchar(100),
+link varchar(50),
+team tinyint(2),
+foreign key(sid) references tb_stuD(stuid),
+PRIMARY KEY(proid)
+);
+
+create 	table tb_acom(
+acoid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+sid int(10) unsigned NOT NULL,
+comp_name varchar(20),
+cod_pltfrm_name varchar(20),
+cod_mrk int(10),
+coding_link varchar(50),
+certi_title varchar(50),
+certi_pdf blob,
+foreign key(sid) references tb_stuD(stuid),
+PRIMARY KEY(acoid)
+);
+
+create table tb_trngD(
+trnid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sid int(10) unsigned NOT NULL,
+comp_domain varchar(50) ,
+comp_name varchar(30),
+trng_area varchar(30) ,
+trng_dur int(10),
+trng_des varchar(100),
+mntr varchar(30),
+trng_pro_des varchar(30),
+pro_name varchar(30),
+team tinyint(2),
+PRIMARY KEY(trnid),
+foreign key(sid) references tb_stuD(stuid)
+);
+
+create table tb_skil(
+skiid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sid int(10) unsigned NOT NULL,
+skill varchar(50),
+foreign key(sid) references tb_stuD(stuid),
+PRIMARY KEY(skiid)
+ );
+
+
+create table tb_tol(
+tolid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sid int(10) unsigned NOT NULL,
+tools varchar(50),
+foreign key(sid) references tb_stuD(stuid),
+PRIMARY KEY(tolid)
+ );
+
+
+
+create table tb_tpa(
+tpaid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+uid int(10) unsigned NOT NULL,
+email varchar(60) NOT NULL,
+course varchar(10),
+branch varchar(10) NOT NULL,
+tpo_connect varchar(20),
+foreign key(uid) references tb_user(useid),
+PRIMARY KEY(tpaid)
+);
+
+create table tb_tpo(
+tpoid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+uid int(10) unsigned NOT NULL,
+course varchar(10), 
+email varchar(60) NOT NULL,
+foreign key(uid) references tb_user(useid),
+PRIMARY KEY(tpoid)
+);
+
+create table tb_comp 
+(
+comid int(10) unsigned NOT NULL AUTO_INCREMENT,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+comp_name varchar(20) NOT NULL,
+address varchar(50) NOT NULL,
+job_loc varchar(20) NOT NULL,
+pkg varchar(20) NOT NULL,
+bond tinyint(2) NOT NULL,
+job_des varchar(50) NOT NULL,
+tnc varchar(50) NOT NULL,
+gap int(3),
+mnth int(5),
+year int(10),
+visit_date date NOT NULL,
+remarks varchar(250),
+status int(10), 
+batch varchar(20) NOT NULL,
+indst_type varchar(20) NOT NULL,
+prsn_connect varchar(30) NOT NULL,
+PRIMARY KEY(comid)
+);
+
+create table tb_placed
+(
+plaid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+comp_id int(10) unsigned NOT NULL,
+uid int(10) unsigned NOT NULL,
+foreign key(uid) references tb_user(useid),
+foreign key(comp_id) references tb_comp(comid)
+);
+
+create table tb_tpastudAsign
+(
+tpsid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+uid int(10) unsigned NOT NULL,
+tpa_id int(10) unsigned NOT NULL,
+foreign key(tpa_id) references tb_tpa(tpaid),
+foreign key(uid) references tb_user(useid)
+);
+
+create table tb_notify(
+notid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sndr_id int(10) unsigned NOT NULL,
+rcvr_id int(10) unsigned NOT NULL,
+comp_id int(10) unsigned NOT NULL,
+foreign key(sndr_id) references tb_user(useid),
+foreign key(rcvr_id) references tb_user(useid),
+foreign key(comp_id) references tb_comp(comid)
+);
+
+create table tb_intrst_stud(
+insid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+comp_name varchar(20) NOT NULL,
+comp_id int(10) unsigned NOT NULL,
+tpaassign_id int(10) unsigned NOT NULL,
+uid int(10) unsigned NOT NULL,
+foreign key(uid) references tb_user(useid),
+foreign key(comp_id) references tb_comp(comid),
+foreign key(tpaassign_id) references tb_tpastudAsign(tpsid)
+);
+
+create table tb_elgbl(
+elgid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+comp_id int(10) unsigned NOT NULL,
+class varchar(20) NOT NULL,
+mrks int(5) unsigned NOT NULL,
+foreign key(comp_id) references tb_comp(comid)
+);
+
+create table tb_comp_cors(
+ccid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+comp_id int(10) unsigned NOT NULL,
+cors varchar(10) NOT NULL,
+branch varchar(10),
+foreign key(comp_id) references tb_comp(comid)
+);
+
+create table tb_tpotpaAsign
+(
+tppid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+tpo_id int(10) unsigned NOT NULL,
+tpa_id int(10) unsigned NOT NULL,
+foreign key(tpo_id) references tb_tpo(tpoid),
+foreign key(tpa_id) references tb_tpa(tpaid)
+);
