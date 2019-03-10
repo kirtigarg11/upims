@@ -37,10 +37,10 @@ pursuing qualification
 -------------------------------
 duration will be in weeks?
 
-insert into tb_proj(sid,pro_name,dur,sdate,edate,mntr,tech,tools,langs,live,des_of_pro,link,team) values(1,"Energy Automation",4,'2018-08-26','2018-09-02',"Debjani","IoT","Arduino","Embedded C++",1,"Consultancy project","github.com",4);
-insert into tb_proj(sid,pro_name,dur,sdate,edate,mntr,tech,tools,langs,live,des_of_pro,link,team) values(1,"Moving Object Tracker",3,'2018-10-16','2018-10-26',"Piyush","CV","Jupyter","python",0,"moving onject","github.com/mad",1);
-insert into tb_proj(sid,pro_name,dur,sdate,edate,mntr,tech,tools,langs,live,des_of_pro,link,team) values(2,"Emojification",6,'2019-01-03','2019-01-26',"Nishant","Android","studio","java",1,"android app","hackerrank.com",4);
-insert into tb_proj(sid,pro_name,dur,sdate,edate,mntr,tech,tools,langs,live,des_of_pro,link,team) values(2,"UPIMS",4,'2019-02-12','2019-02-25',"Anant","web tech","visual studio","html",0,"placement","hackerearth.com",3);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(1,"Energy Automation",4,"Debjani","IoT","Arduino","Embedded C++",1,"Consultancy project","github.com",4);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(1,"Moving Object Tracker",3,"Piyush","CV","Jupyter","python",0,"moving onject","github.com/mad",1);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(2,"Emojification",6,"Nishant","Android","studio","java",1,"android app","hackerrank.com",4);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(2,"UPIMS",4,"Anant","web tech","visual studio","html",0,"placement","hackerearth.com",3);
 
 ------------------------------
 
