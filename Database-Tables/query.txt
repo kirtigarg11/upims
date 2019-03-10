@@ -104,10 +104,10 @@ insert into tb_notify(sndr_id,rcvr_id,comp_id) values(2,2,2);
 
 -------------------------------
 
-insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id) values("microsoft",1,1);
-insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id) values("microsoft",1,2);
-insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id) values("google",2,1);
-insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id) values("google",2,2);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("microsoft",1,1,1);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("microsoft",1,2,2);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("google",2,1,1);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("google",2,2,2);
 
 -------------------------------
 
