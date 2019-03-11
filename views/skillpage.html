@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Skill</title>
+    <!--Links to use modal-->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Modal button to insert skill-->
+   
+    <form action="/app/skillpage" method="post">
+        <div class="modal fade" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Skills</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <input type="text" name="addskill" value="" placeholder="Skill (eg. Data Analysis)">
+        </div>
+        <div class="modal-footer" id="add">
+        <button type="submit" name="addskillbtn" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    </form>
+    <!--Show all skills of student-->
+    <form method="get" action='/app/skillpage'>
+    <table>
+        <thead>
+        <tr>
+            <th>Skills</th>
+            <th>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#skillModal">Add new Skill</button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(i in res1) {%>
+        <tr>
+        <td><%=res1[i].skill %></td>        
+        <td> <button type="submit" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button></td>
+        </tr>
+        <%}%>
+        </tbody>
+    </table>
+</form>
+<br><br><br><br>
+
+<form method="get" action='/app/skillpage'>
+    <table>
+        <thead>
+        <tr>
+            <th>Tools & Technology</th>
+            <th>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#toolModal">Add new Tools & Technology</button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(i in res2) {%>
+        <tr>
+        <td><%=res2[i].tools %></td>        
+        <td> <button type="submit" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button></td>
+        </tr>
+        <%}%>
+        </tbody>
+    </table>
+</form>
+<form action="/app/skillpage" method="post">
+    <div class="modal fade" id="toolModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Add Tools & Technology</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <input type="text" name="addtool" value="" placeholder="Tool & Technology (eg. Android)">
+    </div>
+    <div class="modal-footer" id="add">
+    <button type="submit" name="addtoolbtn" class="btn btn-primary">Add</button>
+    </div>
+</div>
+</div>
+</div>
+</form>
+
+
+</body>
+</html>
