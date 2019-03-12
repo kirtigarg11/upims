@@ -163,7 +163,6 @@ key_skls varchar(100) NOT NULL,
 venue varchar(50) NOT NULL,
 comp_web varchar(50) NOT NULL,
 procedure varchar(100) NOT NULL,
-slry_bnfts varchar(50) NOT NULL,
 PRIMARY KEY(comid)
 );
 
