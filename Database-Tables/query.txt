@@ -28,8 +28,8 @@ insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_ad
 insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(1,"radhika.gla@gla.ac.in","Sharmaji","Monika","I am the best",654895756,"buisness","housemaker",'1997-05-13');
 insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(2,"ankita.chaudry@gla.ac.in","Keshav","krati","Engineer",4554545,"shop","housemaker",'2000-06-06');
 ----------------------------
-insert into tb_eduD(sid,gap,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,twe_yr,pass_year,course,branch,btech_agg,placed) values(1,1,1,"ICSE",80.2,2013,"ICSE",90.2,2015,2020,"Btech","CSE",8.25,1);
-insert into tb_eduD(sid,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,twe_yr,pass_year,course,branch,btech_agg,placed) values(2,1,"CBSE",75.65,2014,"CBSE",85.74,2016,2020,"BTech","CSE",7.9,0);
+insert into tb_eduD(sid,gap,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,twe_yr,pass_year,branch,btech_agg,placed) values(1,1,1,"ICSE",80.2,2013,"ICSE",90.2,2015,2020,"CSE",8.25,1);
+insert into tb_eduD(sid,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,twe_yr,pass_year,branch,btech_agg,placed) values(2,1,"CBSE",75.65,2014,"CBSE",85.74,2016,2020,"CSE",7.9,0);
 
 pursuing qualification
 1=btech
