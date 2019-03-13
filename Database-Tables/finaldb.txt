@@ -125,7 +125,7 @@ uid int(10) unsigned NOT NULL,
 email varchar(60) NOT NULL,
 course varchar(10),
 branch varchar(10) NOT NULL,
-tpoconnect int(10) unsigned,
+tpoconnect int(10) unsigned NOT NULL,
 foreign key(uid) references tb_user(useid),
 foreign key(tpoconnect) references tb_user(useid),
 PRIMARY KEY(tpaid)
