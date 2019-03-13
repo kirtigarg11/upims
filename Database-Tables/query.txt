@@ -34,6 +34,8 @@ insert into tb_eduD(sid,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,t
 pursuing qualification
 1=btech
 2=mtech
+3=bca
+4=mca
 -------------------------------
 duration will be in weeks?
 
