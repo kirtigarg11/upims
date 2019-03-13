@@ -34,3 +34,10 @@ foreign key(rcvr_id) references tb_user(useid)
 );
 
  
+//add foreign key and not null constraint on tpoconnect
+alter table tb_tpa add foreign key(tpoconnect) references tb_user(useid);
+//add data to the tpoconnect column in table
+update tb_tpa set tpoconnect=5 where tpaid=1;
+update tb_tpa set tpoconnect=6 where tpaid=2;
+
+
