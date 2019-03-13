@@ -86,9 +86,8 @@ insert into tb_comp(comp_name,branch,job_loc,pkg,job_role,gap,visit_date,visit_d
 ------------------------------
 
 insert into tb_placed(comp_id,uid) values(1,1);
-insert into tb_placed(comp_id,uid) values(1,2);
 insert into tb_placed(comp_id,uid) values(2,1);
-insert into tb_placed(comp_id,uid) values(2,2);
+
 
 -------------------------------
 
