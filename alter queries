@@ -16,3 +16,21 @@ alter table tb_comp add comp_web varchar(100);
 alter table tb_comp add prcdr varchar(50);
  alter table tb_tpa drop tpo_connect;
  alter table tb_tpa add tpoconnect int(10) unsigned;
+ 
+ 
+ 
+ //drop tb_notify and add the new table from here
+ 
+ drop table tb_notify;
+ 
+ create table tb_notify(
+notid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+sndr_id int(10) unsigned NOT NULL,
+rcvr_id int(10) unsigned NOT NULL,
+body varchar(200) NOT NULL,
+foreign key(sndr_id) references tb_user(useid),
+foreign key(rcvr_id) references tb_user(useid)
+);
+
+ 
