@@ -41,9 +41,8 @@ twe_board varchar(15) ,
 twe_mrk float(10),
 twe_yr int(4),
 pass_year int(5),
-course  varchar(15) NOT NULL,
 branch varchar(15),
-btech_agg float(10) NOT NULL,
+pur_quali_agg float(10) NOT NULL,
 placed tinyint(5) DEFAULT 0,
 foreign key(sid) references tb_stuD(stuid)
 );
