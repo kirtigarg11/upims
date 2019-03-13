@@ -1,0 +1,18 @@
+alter table tb_trngd drop column sdate;
+alter table tb_comp drop column address;
+alter table tb_comp change job_des job_role varchar(20);
+alter table tb_comp drop bond;
+alter table tb_comp drop mnth;
+
+alter table tb_comp drop year;
+alter table tb_comp drop tnc;
+alter table tb_comp add branch varchar(50);
+alter table tb_comp add visit_day varchar(20);
+alter table tb_comp add rep_time varchar(20);
+alter table tb_comp add key_skls varchar(100);	
+alter table tb_comp add key_skls varchar(100);
+alter table tb_comp add venue varchar(100);
+alter table tb_comp add comp_web varchar(100);
+alter table tb_comp add prcdr varchar(50);
+ alter table tb_tpa drop tpo_connect;
+ alter table tb_tpa add tpoconnect int(10) unsigned;
