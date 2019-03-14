@@ -69,24 +69,26 @@ insert into tb_comp(comp_name,branch,job_loc,pkg,job_role,gap,visit_date,visit_d
 
 -----------------------------------------------------------------
 
-insert into tb_placed(comp_id,uid) values(3,3);
-insert into tb_placed(comp_id,uid) values(4,3);
+insert into tb_placed(comp_id,uid) values(1,8);
+insert into tb_placed(comp_id,uid) values(2,9);
 
 
 ----------------------------------------------------------------------
 
-insert into tb_tpastudAsign(uid,tpa_id) values(3,10);
-insert into tb_tpastudAsign(uid,tpa_id) values(4,11);
+insert into tb_tpastudAsign(uid,tpa_id) values(10,3);
+insert into tb_tpastudAsign(uid,tpa_id) values(11,4);
 
 
 -----------------------------------------------------------------------------
-insert into tb_elgbl(comp_id,class,mrks) values(3,"btech",65);
-insert into tb_elgbl(comp_id,class,mrks) values(3,"btech",70);
-insert into tb_elgbl(comp_id,class,mrks) values(4,"btech",75);
+
+///add only when company table has 3rd entry
+insert into tb_elgbl(comp_id,class,mrks) values(3,"10",65);
+insert into tb_elgbl(comp_id,class,mrks) values(3,"12",70);
+insert into tb_elgbl(comp_id,class,mrks) values(3,"btech",75);
 
 
 ----------------------------------------------------------------------------------
-
+//do not add it is wrong entries
 insert into tb_notify(sndr_id,rcvr_id,body) values(8,8,"mno");
 insert into tb_notify(sndr_id,rcvr_id,body) values(9,9,"pqr");
 insert into tb_notify(sndr_id,rcvr_id,body) values(8,8,"stu");
