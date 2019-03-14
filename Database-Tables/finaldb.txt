@@ -226,15 +226,7 @@ branch varchar(10),
 foreign key(comp_id) references tb_comp(comid)
 );
 
-create table tb_tpotpaAsign
-(
-tppid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
-ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-tpo_id int(10) unsigned NOT NULL,
-tpa_id int(10) unsigned NOT NULL,
-foreign key(tpo_id) references tb_tpo(tpoid),
-foreign key(tpa_id) references tb_tpa(tpaid)
-);
+
 
 
  create table tb_edu_cors
