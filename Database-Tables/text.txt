@@ -13,8 +13,8 @@ insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_ad
 insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Shalu","9123456780","gla-15236","singhal",2,1,"M","Delhi","Delhi");
 
 ---------------------------------------------------------------------------------------------------------------
-insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(3,"amisha.pandey@gla.ac.in","AKPnadey","Sunita","I am Amisha",9632587410,"business","housemaker",'1997-07-13');
-insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(4,"madhvi.mittal@gla.ac.in","harish","Gita","I am Madhvi",9854628300,"engineer","housemaker",'1998-04-09');
+insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(8,"amisha.pandey@gla.ac.in","AKPnadey","Sunita","I am Amisha",9632587410,"business","housemaker",'1997-07-13');
+insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(9,"madhvi.mittal@gla.ac.in","harish","Gita","I am Madhvi",9854628300,"engineer","housemaker",'1998-04-09');
 
 -----------------------------------------------------------------------------------------------------------------
 insert into tb_eduD(sid,gap,placed) values(3,1,1);
