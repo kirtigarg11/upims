@@ -235,3 +235,16 @@ tpa_id int(10) unsigned NOT NULL,
 foreign key(tpo_id) references tb_tpo(tpoid),
 foreign key(tpa_id) references tb_tpa(tpaid)
 );
+
+
+ create table tb_edu_cors
+    -> (
+    -> tecid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -> ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    -> stu_id int(10) unsigned NOT NULL,
+    -> class varchar(20),
+    -> marks varchar(20),
+    -> year varchar(20),
+    -> branch varchar(20),
+    -> foreign key(stu_id) references tb_stud(stuid)
+    -> );
