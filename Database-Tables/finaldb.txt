@@ -193,7 +193,7 @@ sndr_id int(10) unsigned NOT NULL,
 rcvr_id int(10) unsigned NOT NULL,
 body varchar(200) NOT NULL,
 foreign key(sndr_id) references tb_user(useid),
-foreign key(rcvr_id) references tb_user(useid),
+foreign key(rcvr_id) references tb_user(useid)
 );
 
 create table tb_intrst_stud(
