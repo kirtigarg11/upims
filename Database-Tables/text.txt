@@ -50,8 +50,8 @@ insert into tb_tol(sid,tools) values(4,"cloud");
 
 ------------------------------------------------------------------------------------------------------------
 
-insert into tb_tpa(uid,email,course,branch,tpoconnect) values(10,"prateek@gla.ac.in","btech","civil",12);
-insert into tb_tpa(uid,email,course,branch,tpoconnect) values(11,"hemant@gla.ac.in","mtech","mechanical",13);
+insert into tb_tpa(uid,email,course,branch,tpoconnect) values(10,"prateek@gla.ac.in","B.Tech","civil",12);
+insert into tb_tpa(uid,email,course,branch,tpoconnect) values(11,"hemant@gla.ac.in","M.Tech","mechanical",13);
 
 
 
