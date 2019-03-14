@@ -28,8 +28,8 @@ insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_ad
 insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(1,"radhika.gla@gla.ac.in","Sharmaji","Monika","I am the best",654895756,"buisness","housemaker",'1997-05-13');
 insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(2,"ankita.chaudry@gla.ac.in","Keshav","krati","Engineer",4554545,"shop","housemaker",'2000-06-06');
 ----------------------------
-insert into tb_eduD(sid,gap,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,twe_yr,pass_year,branch,pur_quali_agg,placed) values(1,1,1,"ICSE",80.2,2013,"ICSE",90.2,2015,2020,"CSE",8.25,1);
-insert into tb_eduD(sid,pur_quali,ten_board,ten_mrk,ten_year,twe_board,twe_mrk,twe_yr,pass_year,branch,pur_quali_agg,placed) values(2,1,"CBSE",75.65,2014,"CBSE",85.74,2016,2020,"CSE",7.9,0);
+insert into tb_eduD(sid,gap,placed) values(1,1,1);
+insert into tb_eduD(sid,gap,placed) values(2,0,0);
 
 pursuing qualification
 1=btech
@@ -98,10 +98,10 @@ insert into tb_tpastudAsign(uid,tpa_id) values(1,1);
 insert into tb_tpastudAsign(uid,tpa_id) values(2,2);
 
 --------------------------------
-insert into tb_notify(sndr_id,rcvr_id,comp_id) values(1,1,1);
-insert into tb_notify(sndr_id,rcvr_id,comp_id) values(2,2,1);
-insert into tb_notify(sndr_id,rcvr_id,comp_id) values(1,1,2);
-insert into tb_notify(sndr_id,rcvr_id,comp_id) values(2,2,2);
+insert into tb_notify(sndr_id,rcvr_id,body) values(1,1,"abc");
+insert into tb_notify(sndr_id,rcvr_id,body) values(2,2,"def");
+insert into tb_notify(sndr_id,rcvr_id,body) values(1,1,"ghi");
+insert into tb_notify(sndr_id,rcvr_id,body) values(2,2,"jkl");
 
 -------------------------------
 
@@ -127,7 +127,6 @@ insert into tb_comp_cors(comp_id,cors,branch) values(1,"btech","ec");
 insert into tb_comp_cors(comp_id,cors) values(1,"bca");
 insert into tb_comp_cors(comp_id,cors,branch) values(2,"btech","cse");
 insert into tb_comp_cors(comp_id,cors,branch) values(2,"btech","me");
-
 insert into tb_comp_cors(comp_id,cors) values(2,"mca");
 
 ----------------------------------------
