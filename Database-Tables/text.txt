@@ -98,6 +98,18 @@ insert into tb_notify(sndr_id,rcvr_id,body) values(9,9,"vwx");
 ----------------------------------------------------------------------------
 
 
+ insert into tb_edu_cors(stu_id,class,marks,year) values(1,"10","89","2013");
+  insert into tb_edu_cors(stu_id,class,marks,year,branch) values(1,"12","85","2015","pcm");
+   insert into tb_edu_cors(stu_id,class,marks,year,branch) values(1,"B.Tech","85","2020","cse");
+   insert into tb_edu_cors(stu_id,class,marks,year) values(2,"10","80","2014");
+  insert into tb_edu_cors(stu_id,class,marks,year,branch) values(2,"12","85","2016","pcm");
+   insert into tb_edu_cors(stu_id,class,marks,year,branch) values(2,"B.Tech","85","2020","cse");
 
-
-
+   insert into tb_edu_cors(stu_id,class,marks,year) values(3,"10","80","2014");
+  insert into tb_edu_cors(stu_id,class,marks,year,branch) values(3,"12","85","2016","pcm");
+   insert into tb_edu_cors(stu_id,class,marks,year,branch) values(3,"B.Tech","85","2020","me");
+   
+   
+   insert into tb_edu_cors(stu_id,class,marks,year) values(4,"10","80","2014");
+  insert into tb_edu_cors(stu_id,class,marks,year,branch) values(4,"12","85","2016","pcm");
+   insert into tb_edu_cors(stu_id,class,marks,year,branch) values(4,"B.Tech","85","2020","cse");
