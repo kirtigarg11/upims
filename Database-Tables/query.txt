@@ -130,8 +130,3 @@ insert into tb_comp_cors(comp_id,cors,branch) values(2,"btech","me");
 insert into tb_comp_cors(comp_id,cors) values(2,"mca");
 
 ----------------------------------------
-
-insert into tb_tpotpaAsign(tpo_id,tpa_id) values(1,1);
-insert into tb_tpotpaAsign(tpo_id,tpa_id) values(2,2);
-
-----------------------------------------
