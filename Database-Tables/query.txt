@@ -72,8 +72,8 @@ insert into tb_tol(sid,tools) values(2,"powerpoint");
 
 -------------------------------
 
-insert into tb_tpa(uid,email,course,branch,tpo_connect) values(3,"praveen@gla.ac.in","btech","cse","lalit");
-insert into tb_tpa(uid,email,course,branch,tpo_connect) values(4,"mukesh@gla.ac.in","btech","me","manisha");
+insert into tb_tpa(uid,email,course,branch,tpoconnect) values(3,"praveen@gla.ac.in","btech","cse",3);
+insert into tb_tpa(uid,email,course,branch,tpoconnect) values(4,"mukesh@gla.ac.in","btech","me",4);
 
 ------------------------------
 
