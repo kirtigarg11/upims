@@ -191,10 +191,9 @@ notid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
 sndr_id int(10) unsigned NOT NULL,
 rcvr_id int(10) unsigned NOT NULL,
-comp_id int(10) unsigned NOT NULL,
+body varchar(200) NOT NULL,
 foreign key(sndr_id) references tb_user(useid),
 foreign key(rcvr_id) references tb_user(useid),
-foreign key(comp_id) references tb_comp(comid)
 );
 
 create table tb_intrst_stud(
