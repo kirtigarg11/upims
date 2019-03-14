@@ -75,8 +75,8 @@ insert into tb_placed(comp_id,uid) values(2,9);
 
 ----------------------------------------------------------------------
 
-insert into tb_tpastudAsign(uid,tpa_id) values(10,3);
-insert into tb_tpastudAsign(uid,tpa_id) values(11,4);
+insert into tb_tpastudAsign(uid,tpa_id) values(8,3);
+insert into tb_tpastudAsign(uid,tpa_id) values(9,4);
 
 
 -----------------------------------------------------------------------------
