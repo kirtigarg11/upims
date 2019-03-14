@@ -1,1 +1,101 @@
-changes are directly made at git.
+------------------------------EXTRA DUMMY DATA---------------------------------------
+
+
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Amisha","9119045620","161500069","pandey",0,1,"F","Agra","Agra");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Madhvi","9719070590","8630283045","mittal",0,1,"F","Rambagh","Rambagh");
+
+---------------------------------------------------------------------------------------------
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Prateek","9541823970","gla-79514","dixit",1,1,"M","gujrat","gujrat");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Hemant","9485671265","gla-14658","singh",1,1,"M","Surat","Surat");
+
+-----------------------------------------------------------------------------------------------------------
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Naman","9654802315","gla-97138","agrawal",2,1,"M","Farah","Farah");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Shalu","9123456780","gla-15236","singhal",2,1,"M","Delhi","Delhi");
+
+---------------------------------------------------------------------------------------------------------------
+insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(3,"amisha.pandey@gla.ac.in","AKPnadey","Sunita","I am Amisha",9632587410,"business","housemaker",'1997-07-13');
+insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(4,"madhvi.mittal@gla.ac.in","harish","Gita","I am Madhvi",9854628300,"engineer","housemaker",'1998-04-09');
+
+-----------------------------------------------------------------------------------------------------------------
+insert into tb_eduD(sid,gap,placed) values(3,1,1);
+insert into tb_eduD(sid,gap,placed) values(4,0,0);
+
+-------------------------------------------------------------------------------------------------------------------
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(3,"RFID",2,"Amrish","web","infinity free","php",1,"parking system","www,rfid.com",5);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(4,"Amcat",4,"Anand","android","android studio","xyz",1,"replica of amcat","www.amcatreplica.com",4);
+
+----------------------------------------------------------------------------------------------------------------------
+insert into tb_acom(sid,comp_name,cod_pltfrm_name,cod_mrk,coding_link,certi_title) values(3,"heckinfy","hackcode",70,"hack.com","heckinfy");
+insert into tb_acom(sid,comp_name,cod_pltfrm_name,cod_mrk,coding_link,certi_title) values(4,"codevita","tcs",80,"codevita.com","codevita");
+
+---------------------------------------------------------------------------------------------------------------
+
+insert into tb_trngD(sid,comp_domain,comp_name,trng_area,trng_dur,trng_des,mntr,trng_pro_des,pro_name,team) values(3,"cloud","mnit","Allahabad",3,"AWS","Anil","website","hosting",4);
+insert into tb_trngD(sid,comp_domain,comp_name,trng_area,trng_dur,trng_des,mntr,trng_pro_des,pro_name,team) values(4,"web","xyz","agra",3,"website designing","nitin","web tech","madbrains",1);
+
+
+----------------------------------------------------------------------------------------------------------
+insert into tb_skil(sid,skill) values(3,"cloud");
+insert into tb_skil(sid,skill) values(3,"data science");
+insert into tb_skil(sid,skill) values(4,"web tech");
+insert into tb_skil(sid,skill) values(4,"hadoop");
+
+
+--------------------------------------------------------------------------------------------------------------
+insert into tb_tol(sid,tools) values(3,"aws");
+insert into tb_tol(sid,tools) values(3,"mat lab");
+insert into tb_tol(sid,tools) values(4,"visual studio");
+insert into tb_tol(sid,tools) values(4,"cloud");
+
+
+------------------------------------------------------------------------------------------------------------
+
+insert into tb_tpa(uid,email,course,branch,tpo_connect) values(10,"prateek@gla.ac.in","btech","civil","Naman");
+insert into tb_tpa(uid,email,course,branch,tpo_connect) values(11,"hemant@gla.ac.in","mtech","mechanical","shalu");
+
+
+
+------------------------------------------------------------------------------------------------------------------
+insert into tb_tpo(uid,course,email) values(12,"btech","naman@gmail.com");
+insert into tb_tpo(uid,course,email) values(13,"mtech","shalu@gmail.com");
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+insert into tb_comp(comp_name,branch,job_loc,pkg,job_role,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr) values("TCS","EC","delhi","10lacs","software",1,'2017-04-09',"monday","8:00A:M","more conditions",0,2018,"IT","naman","Analytical skills","conference hall","www.pqr.com","come on time");
+insert into tb_comp(comp_name,branch,job_loc,pkg,job_role,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr) values("Wipro","CS","Banglore","5lacs","software development",0,'2015-04-09',"monday","10:00A:M","more conditions",0,2020,"IT","naman","Analytical skills","conference hall","www.pqr.com","come on time");
+
+
+
+-----------------------------------------------------------------
+
+insert into tb_placed(comp_id,uid) values(3,3);
+insert into tb_placed(comp_id,uid) values(4,3);
+
+
+----------------------------------------------------------------------
+
+insert into tb_tpastudAsign(uid,tpa_id) values(3,10);
+insert into tb_tpastudAsign(uid,tpa_id) values(4,11);
+
+
+-----------------------------------------------------------------------------
+insert into tb_elgbl(comp_id,class,mrks) values(3,"btech",65);
+insert into tb_elgbl(comp_id,class,mrks) values(3,"btech",70);
+insert into tb_elgbl(comp_id,class,mrks) values(4,"btech",75);
+
+
+----------------------------------------------------------------------------------
+
+insert into tb_notify(sndr_id,rcvr_id,body) values(8,8,"mno");
+insert into tb_notify(sndr_id,rcvr_id,body) values(9,9,"pqr");
+insert into tb_notify(sndr_id,rcvr_id,body) values(8,8,"stu");
+insert into tb_notify(sndr_id,rcvr_id,body) values(9,9,"vwx");
+
+
+----------------------------------------------------------------------------
+
+
+
+
+
