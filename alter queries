@@ -41,3 +41,6 @@ update tb_tpa set tpoconnect=5 where tpaid=1;
 update tb_tpa set tpoconnect=6 where tpaid=2;
 
 
+//commit after adding the extra dummy data
+ update tb_tpa set tpoconnect=12 where tpaid=11;
+  update tb_tpa set tpoconnect=13 where tpaid=10;
