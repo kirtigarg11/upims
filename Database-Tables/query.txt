@@ -1,0 +1,132 @@
+-----------------student--------------------
+
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Radhika","9410258776","161500501","mansisharma",0,1,"F","barielly","barielly"); 
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Ankita","9876543210","161500021","chaudary",0,1,"F","mathura","mathura");
+
+--------------------------------
+active=
+role=0 for student
+role=1 for tpa
+role=2 for tpo
+role=3 director
+-------------------tpa-----------------------
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Praveen mittal","6542310234","gla-23114","praveen",1,1,"M","mathura","mathura");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Mukesh jain","5641237894","gla-39103","mukesh",1,1,"M","mainpuri","mainpuri");
+
+-----------------tpo--------------------
+
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Lalit","456845554","mcd-4921","lalit",2,1,"M","banglore","banglore");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Manisha","54656845","gla-29012","manisha",2,1,"F","kanpur","kanpur");
+
+-----------------director--------------------
+
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Admin","8979715151","imdir","admin",3,1,"F","mathura","mathura"); 
+
+
+
+-----------------------------
+insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(1,"radhika.gla@gla.ac.in","Sharmaji","Monika","I am the best",654895756,"buisness","housemaker",'1997-05-13');
+insert into tb_stuD(uid,email,fname,mname,summary,fnumber,foccu,moccu,dob) values(2,"ankita.chaudry@gla.ac.in","Keshav","krati","Engineer",4554545,"shop","housemaker",'2000-06-06');
+----------------------------
+insert into tb_eduD(sid,gap,placed) values(1,1,1);
+insert into tb_eduD(sid,gap,placed) values(2,0,0);
+
+pursuing qualification
+1=btech
+2=mtech
+3=bca
+4=mca
+-------------------------------
+duration will be in weeks?
+
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(1,"Energy Automation",4,"Debjani","IoT","Arduino","Embedded C++",1,"Consultancy project","github.com",4);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(1,"Moving Object Tracker",3,"Piyush","CV","Jupyter","python",0,"moving onject","github.com/mad",1);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(2,"Emojification",6,"Nishant","Android","studio","java",1,"android app","hackerrank.com",4);
+insert into tb_proj(sid,pro_name,dur,mntr,tech,tools,langs,live,des_of_pro,link,team) values(2,"UPIMS",4,"Anant","web tech","visual studio","html",0,"placement","hackerearth.com",3);
+
+------------------------------
+
+insert into tb_acom(sid,comp_name,cod_pltfrm_name,cod_mrk,coding_link,certi_title) values(1,"Hackfest","iris tech",85,"techm.com/mad","hackfest");
+insert into tb_acom(sid,comp_name,cod_pltfrm_name,cod_mrk,coding_link,certi_title) values(2,"hackathon","codechef",75,"code/anku","hackathon");
+
+------------------------------
+training duration in weeks or month
+
+
+insert into tb_trngD(sid,comp_domain,comp_name,trng_area,trng_dur,trng_des,mntr,trng_pro_des,pro_name,team) values(1,"cv","ducat","delhi",2,"learnt","rinki","moving","tracker",1);
+insert into tb_trngD(sid,comp_domain,comp_name,trng_area,trng_dur,trng_des,mntr,trng_pro_des,pro_name,team) values(2,"ml","hpes","noida",4,"beginner","tanay","object","energy",1);
+
+-----------------------------
+
+insert into tb_skil(sid,skill) values(1,"ml");
+insert into tb_skil(sid,skill) values(1,"android");
+insert into tb_skil(sid,skill) values(2,"cv");
+insert into tb_skil(sid,skill) values(2,"python");
+
+-------------------------------
+
+insert into tb_tol(sid,tools) values(1,"sql server");
+insert into tb_tol(sid,tools) values(1,"spyder");
+insert into tb_tol(sid,tools) values(2,"Jupyter");
+insert into tb_tol(sid,tools) values(2,"powerpoint");
+
+-------------------------------
+
+insert into tb_tpa(uid,email,course,branch,tpoconnect) values(3,"praveen@gla.ac.in","B.Tech","cse",3);
+insert into tb_tpa(uid,email,course,branch,tpoconnect) values(4,"mukesh@gla.ac.in","B.Tech","me",4);
+
+------------------------------
+
+insert into tb_tpo(uid,course,email) values(5,"Btech","lalit@gmail.com");
+insert into tb_tpo(uid,course,email) values(6,"bca","manisha@gmail.com");
+
+------------------------------
+
+insert into tb_comp(comp_name,branch,job_loc,pkg,job_rol,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr) values("microsoft","btech","hyderabad","12lacs","software developer",1,'2019-04-09',"monday","8:00A:M","more conditions",0,2019,"IT","lalit","Analytical skills","conference hall","www.abc.com","xyz");
+insert into tb_comp(comp_name,branch,job_loc,pkg,job_rol,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr) values("google","btech","europe","40lacs","engineer",2,'2019-05-12',"wednesday","10:00 A:M","remarks",1,2020,"IT","manisha","communication skills","webinar","www.mlk.com","lkj");
+
+------------------------------
+
+insert into tb_placed(comp_id,uid) values(1,1);
+insert into tb_placed(comp_id,uid) values(2,1);
+
+
+-------------------------------
+
+
+insert into tb_tpastudAsign(uid,tpa_id) values(1,1);
+insert into tb_tpastudAsign(uid,tpa_id) values(2,2);
+
+--------------------------------
+insert into tb_notify(sndr_id,rcvr_id,body) values(1,1,"abc");
+insert into tb_notify(sndr_id,rcvr_id,body) values(2,2,"def");
+insert into tb_notify(sndr_id,rcvr_id,body) values(1,1,"ghi");
+insert into tb_notify(sndr_id,rcvr_id,body) values(2,2,"jkl");
+
+-------------------------------
+
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("microsoft",1,1,1);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("microsoft",1,2,2);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("google",2,1,1);
+insert into tb_intrst_stud(comp_name,comp_id,tpaassign_id,uid) values("google",2,2,2);
+
+-------------------------------
+
+insert into tb_elgbl(comp_id,class,mrks) values(1,"10",60);
+insert into tb_elgbl(comp_id,class,mrks) values(1,"12",70);
+insert into tb_elgbl(comp_id,class,mrks) values(1,"btech",65);
+insert into tb_elgbl(comp_id,class,mrks) values(2,"10",65);
+insert into tb_elgbl(comp_id,class,mrks) values(2,"12",75);
+insert into tb_elgbl(comp_id,class,mrks) values(1,"btech",85);
+
+------------------------------------
+
+insert into tb_comp_cors(comp_id,cors,branch) values(1,"btech","cse");
+insert into tb_comp_cors(comp_id,cors,branch) values(1,"btech","me");
+insert into tb_comp_cors(comp_id,cors,branch) values(1,"btech","ec");
+insert into tb_comp_cors(comp_id,cors) values(1,"bca");
+insert into tb_comp_cors(comp_id,cors,branch) values(2,"btech","cse");
+insert into tb_comp_cors(comp_id,cors,branch) values(2,"btech","me");
+insert into tb_comp_cors(comp_id,cors) values(2,"mca");
+
+----------------------------------------
