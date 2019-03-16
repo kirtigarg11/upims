@@ -3,6 +3,19 @@
 
 insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Amisha","9119045620","161500069","pandey",0,1,"F","Agra","Agra");
 insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Madhvi","9719070590","8630283045","mittal",0,1,"F","Rambagh","Rambagh");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Madh","9087654329","9834562345","mita",0,1,"M","Ranchi","Ranchi");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("raghav","9234523167","975478456","singh",0,1,"M","goa","goa");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Abhi","9675894512","9754675490","singhal",0,1,"M","Sikkim","Sikkim");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Abhilasha","9676134512","9450987490","kanojia",0,1,"F","Sikandra","Sikandra");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Zain","9676145457","9450909876","imam",0,1,"M","Shimla","Shimla");
+insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Riha","956875457","9871234098","gupta",0,1,"F","Assam","Assam");
+
+
+
+
+
+
+
 
 ---------------------------------------------------------------------------------------------
 insert into tb_user(name,cont_num,user_id,pass,role,active,gender,cur_add,per_add) values("Prateek","9541823970","gla-79514","dixit",1,1,"M","gujrat","gujrat");
