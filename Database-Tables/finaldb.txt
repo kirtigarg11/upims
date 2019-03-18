@@ -1,3 +1,7 @@
+create database placement;
+
+use placement;
+
 create table tb_user(
 useid int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ts timestamp NULL DEFAULT CURRENT_TIMESTAMP,
