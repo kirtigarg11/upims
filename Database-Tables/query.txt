@@ -82,8 +82,8 @@ insert into tb_tpo(uid,course,email) values(6,"bca","manisha@gmail.com");
 
 ------------------------------
 
-insert into tb_comp(comp_name,branch,job_loc,pkg,job_rol,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr,course) values("microsoft","btech","hyderabad","12lacs","software developer",1,'2019-04-09',"monday","8:00A:M","more conditions",0,2019,"IT","lalit","Analytical skills","conference hall","www.abc.com","xyz".""B.Tech);
-insert into tb_comp(comp_name,branch,job_loc,pkg,job_rol,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr,course) values("google","btech","europe","40lacs","engineer",2,'2019-05-12',"wednesday","10:00 A:M","remarks",1,2020,"IT","manisha","communication skills","webinar","www.mlk.com","lkj");
+insert into tb_comp(comp_name,branch,job_loc,pkg,job_rol,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr,course) values("microsoft","btech","hyderabad","12lacs","software developer",1,'2019-04-09',"monday","8:00A:M","more conditions",0,2019,"IT","lalit","Analytical skills","conference hall","www.abc.com","xyz","B.Tech");
+insert into tb_comp(comp_name,branch,job_loc,pkg,job_rol,gap,visit_date,visit_day,rep_time,remarks,status,batch,indst_type,prsn_connect,key_skls,venue,comp_web,prcdr,course) values("google","btech","europe","40lacs","engineer",2,'2019-05-12',"wednesday","10:00 A:M","remarks",1,2020,"IT","manisha","communication skills","webinar","www.mlk.com","lkj","BCA");
 
 ------------------------------
 
