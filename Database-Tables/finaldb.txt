@@ -157,6 +157,7 @@ key_skls varchar(100) NOT NULL,
 venue varchar(50) NOT NULL,
 comp_web varchar(50) NOT NULL,
 prcdr varchar(100) NOT NULL,
+course varchar(20),
 PRIMARY KEY(comid)
 );
 
