@@ -1,0 +1,22 @@
+.bg-gradient-primary {
+background: url(../img/b4.jpg) no-repeat center;
+background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 100vh;
+
+}
+
+.bg-login-image {
+background-color: black;
+  background: url(../img/img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image{
+	background: url(../img/img2.jpg);
+	
+}

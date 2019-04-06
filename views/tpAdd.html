@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/styles/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../static/styles/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+   TPO details
+  </title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ 
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../static/styles/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../static/styles/assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../static/styles/assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+        <a href="" class="simple-text logo-normal">
+         GLA University
+        </a>
+      </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="/app/dashboard">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/app/userhead">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li>
+		  <li class="nav-item ">
+            <a class="nav-link" href="/app/tpAdd">
+              <i class="material-icons">add</i>
+              <p>Add TPO</p>
+            </a>
+          </li>
+		  <li class="nav-item ">
+            <a class="nav-link" href="/app/tpaAdd">
+              <i class="material-icons">add</i>
+              <p>Add TPA</p>
+            </a>
+          </li>
+		  
+          <li class="nav-item ">
+            <a class="nav-link" href="/app/tpaAdd">
+            <i class="far fa-edit"></i>
+
+
+              <p>Update TPA</p>
+            </a>
+          </li>
+		   <li class="nav-item ">
+            <a class="nav-link" href="/app/tpAdd">
+            <i class="far fa-edit"></i>
+
+
+              <p>Update TPO</p>
+            </a>
+          </li>
+		  
+        
+      </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#pablo">Table List</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">notifications</i>
+                  <span class="notification">5</span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                  <a class="dropdown-item" href="#">Another Notification</a>
+                  <a class="dropdown-item" href="#">Another One</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/app/logout">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">TPO Details</h4>
+                 
+                  
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table" id="myTable" name="tpodetails" >
+                          <thead class="text-primary">
+                            <tr>  
+                                <th>Name</th>
+                                <th>User ID</th>
+                                
+                             <th>Course</th>
+                             <th>Email</th>
+                             <th>Active</th>
+                             <th>Contact</th>
+                             <th>Gender</th>
+                             <th>Address</th>
+        
+                             <th>Update</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <%for(i in res){%>
+                            <tr>
+                                <td><%=res[i].name%></td>
+                                <td><%=res[i].user_id%></td>
+                               
+                                <td><%=res[i].course%></td>
+                                <td><%=res[i].email%></td>
+                                <%if(res[i].active==1){%>
+                                <td>YES</td>
+                                <%}else{%>
+                                    <td>NO</td>
+                                <%}%>
+                                <td><%=res[i].cont_num%></td>
+                                <%if(res[i].gender=='female'){%>
+                                  <td>Female</td>
+                                  <%}else{%>
+                                      <td>Male</td>
+                                  <%}%>
+                               
+                                <td><%=res[i].cur_add%></td>
+                                
+                             
+                            <td><button type="button"  class="bg btn btn-primary btn-round" value= '<%=res[i].tpoid %>'data-toggle="modal" data-target="#tpoupdt">Update</button></td> 
+                            </tr>
+                           <%}%>
+                           
+                          </tbody>
+                        </table> 
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+      
+      <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#add">Add  <i class="material-icons">add</i></button>
+            
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="">
+                  GLA University
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="material-icons">favorite</i> by
+            <a href="" target="_blank"> GLA University</a> for a better future.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+ 
+  <!--   Core JS Files   -->
+  <script src="../static/styles/assets/js/core/jquery.min.js"></script>
+  <script src="../static/styles/assets/js/core/popper.min.js"></script>
+  <script src="../static/styles/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../static/styles/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../static/styles/assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../static/styles/assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../static/styles/assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../static/styles/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../static/styles/assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../static/styles/assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../static/styles/assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../static/styles/assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../static/styles/assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../static/styles/assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../static/styles/assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/styles/assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../static/styles/assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+<!--modal for tpo update-->
+<div class="modal fade" id="tpoupdt" role="dialog">
+    <div class="modal-dialog">
+      <form action="/app/tpAdd1" class="modal-content animate"  method="post" >
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Edit</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         
+        </div>
+      
+        <div class="modal-body">
+          <label for="name"><b>Name</b></label>
+          <input type="text"  name="name1"  id="name1" value="" class="form-control" required>
+            <br> 
+            <label for="user_id"><b>User ID</b></label>
+            <input type="text"  name="user_id1" id="user_id1" value="" class="form-control" required>
+              <br>
+              <label for="course"><b>Course</b></label>
+              <input type="text"  name="course1" id="course1" value="" class="form-control" required>
+                <br>
+                <label for="email"><b>Email</b></label>
+                <input type="text"  name="email1" id="email1" value="" class="form-control" required>
+                  <br>
+           
+                  <label for="email"><b>Active</b></label>
+                  <br>
+                
+               <select id="active1" name="active1">
+<option>Active Status</option>
+                        <option value=1 >Yes</option>
+                        <option value=0>No</option>
+                   
+            </select>
+
+              <br>
+              <label for="cont_num"><b>Contact</b></label>
+              <input type="text"  name="cont_num1" id="cont_num1" value="" class="form-control" required>
+                <br>
+                <label for="gender"><b>Gender</b></label>
+                <select id="gender1" name="gender1">
+                    <option>Select Gender</option>
+                  <option value='female' >Female</option>
+                  <option value='male'>Male</option>
+             
+      </select>
+                                  <br>
+                  <label for="cur_add"><b>Address</b></label>
+                  <input type="text"  name="cur_add1" id="cur_add1" value="" class="form-control" required>
+                    <br>
+              
+                      </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-round" name="updatetpo1" id="updatetpo" value="" >update</button>
+        </div>
+      </div>
+    </form>
+    </div>
+   
+  </div> 
+<!--ending-->
+<!--add modal-->
+<div class="modal fade" id="add" role="dialog">
+    <div class="modal-dialog">
+      <form action="/app/tpAdd2" class="modal-content animate"  method="post" enctype="multipart/form-data">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Add</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         
+        </div>
+        <div class="modal-body">
+          <label for="name"><b>Name</b></label>
+          <input type="text"  name="name"    class="form-control" required>
+            <br> 
+            <label for="cont_num"><b>Contact Number</b></label>
+            <input type="text"  name="cont_num"  class="form-control" required>
+              <br>
+              <label for="user_id"><b>User ID</b></label>
+            <input type="text"  name="user_id"  value="" class="form-control" required>
+              <br>
+              <label for="pass"><b>Password</b></label>
+            <input type="text"  name="pass"  value="" class="form-control" required>
+              <br>
+              <label for="gender"><b>Gender</b></label>
+              <br>
+              <select id="gender1" name="gender">
+ <option> Select</option>
+                <option value='female' >Female</option>
+                <option value='male'>Male</option>
+           
+    </select>
+              <br>
+              <label for="Address"><b>cur_add</b></label>
+            <input type="text"  name="cur_add"  value="" class="form-control" required>
+              <br>
+              <label for="per_add"><b>Permanent Address</b></label>
+            <input type="text"  name="per_add"  value="" class="form-control" required>
+              <br>
+             
+              <label for="course"><b>Course</b></label>
+            <input type="text"  name="course"  value="" class="form-control" required>
+              <br>
+              <label for="email"><b>Email</b></label>
+              <input type="text"  name="email"  value="" class="form-control" required>
+                <br>
+             
+                      </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-round" name="add" id="add" >add</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+<!--add modal-->
+<!--my script-->
+ 
+<script type="text/javascript">
+  $(document).ready(function(){
+   
+      // Get combined text contents of all paragraphs
+      
+        $('.bg').click(function (e) {
+         // console.log(e.target.getAttribute('value'));
+          var a=e.target.getAttribute('value');
+          console.log(a);
+
+     $("#update").val(a);
+        
+
+
+
+
+$("#myTable").on('click','.bg',function(){
+// get the current row
+var currentRow=$(this).closest("tr"); 
+
+var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+var col2=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
+var col3=currentRow.find("td:eq(2)").text(); // get current row 3rd TD
+var col4=currentRow.find("td:eq(3)").text();
+var col5=currentRow.find("td:eq(4)").text();
+var col6=currentRow.find("td:eq(5)").text();
+var col7=currentRow.find("td:eq(6)").text();
+var col8=currentRow.find("td:eq(7)").text();
+var col9=currentRow.find("td:eq(8)").text();
+console.log(col5);
+if(col5=="YES"){
+col5=1;
+$("#active1 option[value=1]").prop('selected', true);
+}
+else{
+col5=0;
+$("#active1 option[value=0]").prop('selected', true);
+}
+
+if(col7=="Female"){
+
+$("#active1 option[value='female']").prop('selected', true);
+}
+else{
+
+$("#active1 option[value='male']").prop('selected', true);
+}
+//var col10=currentRow.find("td:eq(9)").text();
+console.log(a);
+//$("#comp_domain").html(col1);
+$("#name1").val(col1);
+$("#cont_num1").val(col6);
+$("#user_id1").val(col2);
+// $("#active1").val(col5);
+//$("#gender1").val(col7);
+$("#cur_add1").val(col8);
+$("#course1").val(col3);
+$("#email1").val(col4);
+
+
+//$("#team1").val(col9);
+$("#updatetpo").val(a);
+});
+});
+
+$("#myInput").on("keyup", function() {
+var value = $(this).val().toLowerCase();
+$("#myTable tr").filter(function() {
+$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+});
+      });
+    });
+   
+        </script>
+<!--end of script-->
+</body>
+
+</html>

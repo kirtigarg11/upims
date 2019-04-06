@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/styles/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../static/styles/assets/img/favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+ TPA 
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../static/styles/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../static/styles/assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../static/styles/assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="/app/dashboard">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/app/userhead">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li>
+		  <li class="nav-item ">
+            <a class="nav-link" href="/app/tpAdd">
+              <i class="material-icons">add</i>
+              <p>Add TPO</p>
+            </a>
+          </li>
+		  <li class="nav-item ">
+            <a class="nav-link" href="/app/tpaAdd">
+              <i class="material-icons">add</i>
+              <p>Add TPA</p>
+            </a>
+          </li>
+		  
+          <li class="nav-item ">
+            <a class="nav-link" href="/app/tpaAdd">
+            <i class="far fa-edit"></i>
+
+
+              <p>Update TPA</p>
+            </a>
+          </li>
+		   <li class="nav-item ">
+            <a class="nav-link" href="/app/tpAdd">
+            <i class="far fa-edit"></i>
+
+
+              <p>Update TPO</p>
+            </a>
+          </li>
+		  
+        
+      </ul>
+      </div> 
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#pablo">Table List</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <form class="navbar-form">
+              <div class="input-group no-border">
+               
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">notifications</i>
+                  <span class="notification">5</span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                  <a class="dropdown-item" href="#">Another Notification</a>
+                  <a class="dropdown-item" href="#">Another One</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/app/logout">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">TPA</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table" id="myTable" name="tpodetails" >
+                        
+                          <thead class="text-primary">
+                            <tr>
+                                    
+                                   
+                                <th>Name</th>
+                                <th>User ID</th>
+                                <th>Assigned TPO</th>
+                                <th>Course</th>
+                                <th>Branch</th>
+                                <th>Email</th>
+                               
+                               
+                                <th>Gender</th>
+                                <th>Active</th>
+                             <th>Address</th>
+                             <th>Mobile</th>
+           
+        
+                             <th>Assign Tpo</th>
+                             <th>Edit </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <%for(i in res){%>
+                            <tr>
+                                <td><%=res[i].tpaname%></td>
+                                <td><%=res[i].user_id%></td>
+                                <td><%=res[i].tponame%></td>
+                                <td><%=res[i].course%></td>
+                                <td><%=res[i].branch%></td>
+                                <td><%=res[i].email%></td>
+                               
+                                <%if(res[i].gender=='female'){%>
+                                  <td>Female</td>
+                                  <%}else{%>
+                                      <td>Male</td>
+                                  <%}%>
+                               
+                               
+                               
+                                <%if(res[i].active==1){%>
+                                <td>YES</td>
+                                <%}else{%>
+                                    <td>NO</td>
+                                <%}%>
+                                
+                               
+                                <td><%=res[i].cur_add%></td>
+                                <td><%=res[i].cont_num%></td>
+                               
+                               
+                               
+                            
+                            <td><button type="button"  class="bg bg btn btn-primary btn-round" id="detail" value= '<%=res[i].tpaid %>' data-toggle="modal" data-target="#update">changeTpo</button></td> 
+                            <td><button type="button"  class="bg bg btn btn-primary btn-round" id="detail" value= '<%=res[i].tpaid %>' data-toggle="modal" data-target="#tpaupdt">Update</button></td> 
+                            </tr>
+                           <%}%>
+                           
+                          </tbody>
+                        </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" id="addtpa" data-toggle="modal" data-target="#add">Add+</button>
+
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="  ">
+                 GLA Universty
+                </a>
+              </li>
+              <li>
+                <a href=" ">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href=" ">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href=" ">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="material-icons">favorite</i> by
+            <a href=" " target="_blank">GLA Univesity</a> for a better future.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+ 
+  <!--   Core JS Files   -->
+  <script src="../static/styles/assets/js/core/jquery.min.js"></script>
+  <script src="../static/styles/assets/js/core/popper.min.js"></script>
+  <script src="../static/styles/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../static/styles/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../static/styles/assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../static/styles/assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../static/styles/assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../static/styles/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../static/styles/assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../static/styles/assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../static/styles/assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../static/styles/assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../static/styles/assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../static/styles/assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../static/styles/assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../static/styles/assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/styles/assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../static/styles/assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+  <!--update tpa details-->
+  <div class="modal fade" id="tpaupdt" role="dialog">
+      <div class="modal-dialog">
+        <form action="/app/updatetpa" class="modal-content animate"  method="post" >
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+        
+          <div class="modal-body">
+            <label for="name"><b>name</b></label>
+            <input type="text"  name="name1"  id="name1" value="" class="form-control" required>
+              <br> 
+              <label for="user_id"><b>user_id</b></label>
+              <input type="text"  name="user_id1" id="user_id1" value="" class="form-control" required>
+                <br>
+               
+                <label for="course"><b>course</b></label>
+                <input type="text"  name="course1" id="course1" value="" class="form-control" required>
+                  <br>
+                  <label for="branch"><b>branch</b></label>
+                  <input type="text"  name="branch1"  id="branch1" value="" class="form-control" required>
+                    <br>
+                    
+                  <label for="email"><b>email</b></label>
+                  <input type="text"  name="email1" id="email1" value="" class="form-control" required>
+                    <br>
+
+                <br>
+
+                  <label for="gender"><b>gender</b></label>
+                  <br>
+
+                  <select id="gender1" name="gender1">
+
+                    <option value='female' >Female</option>
+                    <option value='male'>Male</option>
+               
+        </select>
+<br>                         
+        <label for="email"><b>Active</b></label>
+        <br>                  <select id="active1" name="active1">
+
+          <option value=1 >Yes</option>
+          <option value=0>No</option>
+     
+</select>
+                                    <br>
+                    <label for="cur_add"><b>cur_add</b></label>
+                    <input type="text"  name="cur_add1" id="cur_add1" value="" class="form-control" required>
+                      <br>
+                      <label for="cont_num"><b>cont_num</b></label>
+                      <input type="text"  name="cont_num1" id="cont_num1" value="" class="form-control" required>
+                        <br>                          
+                        </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-round" name="updatetpo1" id="updatetpo" value="" >update</button>
+          </div>
+        </div>
+      </form>
+      </div>
+     
+    </div> 
+
+
+  <!--end-->
+  <!--modal assign -->
+  <div class="modal fade" id="update" role="dialog">
+      <div class="modal-dialog">
+         
+        <form action="/app/tpoassign1" class="modal-content animate"  name="tpoassign" id="tpoassign"  method="post" >
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Assign </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+      
+          </div>
+          <div class="modal-body">
+              <select id="course" name="course">
+                <option>select branch</option>
+                  <option value='btech' >btech</option>
+                  <option value='Btech'>mba</option>
+            </select>
+
+    
+    
+               <br>
+               <div id="h">
+
+               </div>
+                
+                        </div>
+                        
+          <div class="modal-footer">
+            <button type="submit" name="assign" class="btn btn-primary btn-round" value=""  id="assign" >assign</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    <!--end-->
+    
+    <!--Add tpa-->
+    <div class="modal fade" id="add" role="dialog">
+        <div class="modal-dialog">
+           
+          <form action="/app/addtpa" class="modal-content animate"  name="tpoassign" id="tpoassign"  method="post" enctype="multipart/form-data" >
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+               
+
+
+
+
+              <label for="name"><b>name</b></label>
+              <input type="text"  name="name"    class="form-control" required>
+                <br> 
+                <label for="cont_num"><b>cont_num</b></label>
+                <input type="text"  name="cont_num"  class="form-control" required>
+                  <br>
+                  <label for="user_id"><b>user_id</b></label>
+                <input type="text"  name="user_id"  value="" class="form-control" required>
+                  <br>
+                  <label for="pass"><b>pass</b></label>
+                <input type="text"  name="pass"  value="" class="form-control" required>
+                  <br>
+                  <label for="gender"><b>gender</b></label>
+                  <br>
+                  <select id="gender1" name="gender">
+     
+                    <option value='female' >Female</option>
+                    <option value='male'>Male</option>
+               
+        </select>
+                  <br>
+                  <label for="cur_add"><b>cur_add</b></label>
+                <input type="text"  name="cur_add"  value="" class="form-control" required>
+                  <br>
+                  <label for="per_add"><b>per_add</b></label>
+                <input type="text"  name="per_add"  value="" class="form-control" required>
+                  <br>
+               
+                  <label for="course"><b>course</b></label>
+                  <br>
+               
+                  <select id="course123" name="course">
+                    <option>select branch</option>
+                      <option value='btech' >btech</option>
+                      <option value='Btech'>Btech</option>
+                      <option value='bca'>BCA</option>
+                </select>
+                <br>
+                <br>
+                
+                <label for="branch"><b>AssignTPO</b></label>
+                <div id="tpo">
+
+                </div>
+
+                  <br>
+                  <label for="branch"><b>branch</b></label>
+                  <input type="text"  name="branch"  value="" class="form-control" required>
+                    <br>
+                  <label for="email"><b>email</b></label>
+                  <input type="text"  name="email"  value="" class="form-control" required>
+                    <br>
+
+
+
+
+
+
+                          </div>
+                          
+            <div class="modal-footer">
+              <button type="submit" name="assign" class="btn-onet"  >submit</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    <!--add end-->
+    <!--update-->
+
+
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // $("#detail").click(function(e){
+        //   alert("hello");
+        //   var a=e.target.getAttribute('value');
+        //               console.log("helo");
+                  //   $("#assign").val(a);
+           $("#myTable").on('click','.bg',function(e){
+            var a=e.target.getAttribute('value');
+                      console.log(a,"kirti");
+                      $("#assign").val(a);
+            var currentRow=$(this).closest("tr");
+              $("#updatetpo").val(a);
+ var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+ var col2=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
+ var col3=currentRow.find("td:eq(2)").text(); // get current row 3rd TD
+ var col4=currentRow.find("td:eq(3)").text();
+ var col5=currentRow.find("td:eq(4)").text();
+ var col6=currentRow.find("td:eq(5)").text();
+ var col7=currentRow.find("td:eq(6)").text();
+ var col8=currentRow.find("td:eq(7)").text();
+  var col9=currentRow.find("td:eq(8)").text();
+  var col10=currentRow.find("td:eq(9)").text();
+  console.log(col1,col2,col3,col4,col5,col6,col7,col8,col9,col10);
+  if(col8=="YES"){
+   
+   $("#active1 option[value=1]").prop('selected', true);
+ }
+ else{
+  
+   $("#active1 option[value=0]").prop('selected', true);
+ }
+
+    if(col7=="Female"){
+ 
+   $("#active1 option[value='female']").prop('selected', true);
+ }
+ else{
+  
+   $("#active1 option[value='male']").prop('selected', true);
+ }
+
+//  var col10=currentRow.find("td:eq(9)").text();
+$("#name1").val(col1);
+$("#user_id1").val(col2);
+// $("#astpo").val(col3);
+$("#course1").val(col4);
+$("#branch1").val(col5);
+console.log(col5);
+$("#email1").val(col6);
+// $("#astpo").val(col7);
+// $("#astpo").val(col8);
+$("#cur_add1").val(col9);
+$("#cont_num1").val(col10);
+             
+              
+//$("#cont_num1").val(a);
+                                  //  alert(a);
+ $("#course").change(function(){
+var cour=$('#course').val();
+$.ajax({
+type:"POST",
+url:"/app/tpoassign",
+data: {cour:cour},
+success:function(res1){
+//console.log(res1);
+
+var l=res1.length;
+var ms='';
+
+for(var i=0;i<l;i++){
+var s=res1[i].tpoid.toString();
+console.log(s);
+   
+    ms=ms+'<input type="radio"'+" "+'name="option"'+" " +'value='+res1[i].tpoid.toString()+'>'+' '+res1[i].name+'<br>';
+console.log(ms);
+}
+$("#h").html(ms);
+
+}
+});
+          });
+
+
+
+    
+
+});
+
+$("#addtpa").click(function(){
+  //alert("hehee");
+$("#course123").change(function(){
+  console.log("kikiki");
+var cour=$('#course123').val();
+$.ajax({
+type:"POST",
+url:"/app/tpoassign",
+data: {cour:cour},
+success:function(res1){
+//console.log(res1);
+console.log("addcourse");
+
+var l=res1.length;
+var ms1='';
+
+for(var i=0;i<l;i++){
+var s=res1[i].tpoid.toString();
+console.log(s);
+   
+    ms1=ms1+'<input type="radio"'+" "+'name="option1"'+" " +'value='+res1[i].tpoid.toString()+'>'+' '+res1[i].name+'<br>';
+console.log(ms1);
+}
+$("#tpo").html(ms1);
+
+}
+
+
+});
+});
+
+});
+
+});
+      
+    // });
+      </script>
+          
+</body>
+
+</html>

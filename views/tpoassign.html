@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>   
+</head>
+
+
+<div class="container">
+ 
+        <h2>Filterable Table</h2>
+         
+        <input id="myInput" type="text" placeholder="Search..">
+        <br><br>
+          <table class="table" id="myTable" name="tpodetails" >
+                  <form action="/app/tpoassign" class="modal-content animate"  method="get" >
+            <thead>
+              <tr>
+                      name,cont_num,user_id,active,gender,cur_add,course,email
+                   <h1>TPa Details</h1>   
+                  <th>name</th>
+                  <th>cont_num</th>
+                  <th>user_id</th>
+                  <th>active</th>
+                  <th>gender</th>
+               <th>cur_add</th>
+               <th>email</th>
+               <th>course</th>
+               <th>branch</th>
+             
+             
+               
+
+               <th>update</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                  
+              
+              <td><button type="submit" name="assign" class="bg" value= '<%=res[i].tpaid %>' >Update</button></td> 
+           
+              </tr>
+             <%}%>
+             
+            </tbody>
+          </table>
+          <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#assigntpo">Open Small Modal</button> -->
+        </div>
+        </form>
+    </body>
+        </html>
