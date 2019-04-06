@@ -3,8 +3,10 @@ var util=require('util');
 var databaseUtils = require('../utils/databaseUtils');
 module.exports = {
 showStuPersDetail: function* (next){
-    var queryString ='select * from student_detail';
-    var query=util.format(queryString);
+    console.log("1");
+    var uid=this.currentUser.useid;
+    var queryString ='select * from tb_stud where uid=%s';
+    var query=util.format(queryString,uid);
     var res=yield databaseUtils.executeQuery(query);
      
     
@@ -13,19 +15,25 @@ showStuPersDetail: function* (next){
    });
   },
   UpDetails:function*(next){
-    var name=this.request.body.fields.name;
-    var fname=this.request.body.fields.fname;
-    var mname=this.request.body.fields.mname;
-    var cont_num=this.request.body.fields.cont_num;
-    var fnumber=this.request.body.fields.fnumber;
-    var foccu=this.request.body.fields.foccu;
-    var moccu=this.request.body.fields.moccu;
-    var cur_add=this.request.body.fields.cur_add;
-    var per_add=this.request.body.fields.per_add;
-    var queryString='update student_detail set name="%s",fname="%s",mname="%s",cont_num="%s",fnumber="%s",foccu="%s",moccu="%s",cur_add="%s",per_add="%s" where id=1';
-    var query=util.format(queryString,name,fname,mname,cont_num,fnumber,foccu,moccu,cur_add,per_add);
+    console.log("update");
+
+    var email=this.request.body.email;
+    console.log(email);
+    var fname=this.request.body.fname;
+    console.log(fname);
+    var mname=this.request.body.mname;
+  
+    var summary=this.request.body.summary;
+    var fnumber=this.request.body.fnumber;
+    var foccu=this.request.body.foccu;
+    var moccu=this.request.body.moccu;
+    
+    var uid=this.currentUser.useid;
+    console.log(uid,"het");
+    var queryString='update tb_stud set email="%s",fname="%s",mname="%s",summary="%s",fnumber="%s",foccu="%s",moccu="%s"where uid=%s';
+     var query=util.format(queryString,email,fname,mname,summary,fnumber,foccu,moccu,uid);
     var res1=yield databaseUtils.executeQuery(query);
-    console.log(name);
+    console.log(res1);
     this.redirect('/app/personal');
   }
 }

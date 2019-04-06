@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>   
+  
+ 
+</head>
+<br>
+<br>
+<br>    
+
+
+<div class=" mx-auto"  style="width: 500px;">
+    <form action="/app/register3" method="post"  autocomplete="on">
+
+           <input type="text" id="gap"  name="gap" class="form-control mb-4" placeholder="Gap">
+           
+           <button type="button" id="add123" class="btn btn-primary">Add Edu Details</button>
+       
+    <div id="detail">
+
+    </div>
+       <div id="10">
+
+       </div>
+       <div id="12">
+
+       </div>
+       <div id="diploma">
+
+    </div>
+    
+       <div id="graduate">
+
+       </div>
+       <div id="post">
+           
+       </div>
+    
+        <button type="submit"  id="he" name="sid" value='<%=sid%>' class="btn btn-info my-4 btn-block"   >Submit</button>
+    
+    </form>
+    </div>
+        
+  
+ 
+
+</body>
+
+
+
+<script type="text/javascript">
+ $(document).ready(function(){
+     var ma=5;
+     var x=0;
+     var ms4="";
+     var ms0="";
+     var ms2="";
+     var ms1="";
+     var ms3="";
+
+ms0=ms0+"<div class='col-md'>"+"<input type='text' class=' form-control' id='yr10' name='ten_year' placeholder='Tenth_Year'>"+"</div>"+"<br>"
+ms0=ms0+"<div class='col-md'>"+"<input type='text' class=' form-control' id='mark10' name='ten_mrk' placeholder='Tenth_Mark'>"+"</div>"
+ms0=ms0+"<button class='col-md btn-block' id='da10' name='sid'"+ "type='button'>Save</button>"
+ms0=ms0+"<button class='col-md btn-block' id='remove10' name='sid'"+ "type='button'>Remove</button>"
+
+ms1=ms1+"<div class='col-md'>"+"<input type='text' class=' form-control' id='mark12' name='twe_mrk' placeholder='Twelve_Mark'>"+"</div>"
+ms1=ms1+"<div class='col-md'>"+"<input type='text' class=' form-control' id='yr12' name='twe_yr' placeholder='Tweleve_Year'>"+"</div>"+"</div>"
+ms1=ms1+"<button class='col-md btn-block' id='da12' name='sid'"+ "type='button'>Save</button>"
+ms1 =ms1+"<button class='col-md btn-block' id='remove12' name='sid'"+ "type='button'>Remove</button>"
+
+
+ms2=ms2+"<div class='col-md'>" + "<input type='text' class=' form-control' id='coursed' name='course' placeholder='Doploma Course'>"+"</div>"
+ms2=ms2+ "<div class='col-md'>" + "<input type='text' class=' form-control' id='branchd' name='branch' placeholder='Branch'>"+"</div>"
+ms2=ms2+"<div class='col-md'>"+"<input type='text' class=' form-control' id='markd' name='mark' placeholder='Marks'>"+"</div>"
+ms2=ms2+"<div class='col-md'>"+"<input type='text' class=' form-control' id='yrd' name='yr' placeholder='Passing Year'>"+"</div>"+"</div>"
+ms2=ms2+"<button class='col-md btn-block' id='dad' name='sid'"+"type='button'>Save</button>"
+ms2=ms2+"<button class='col-md btn-block' id='removed' name='sid'"+ "type='button'>Remove</button>"
+
+ms3=ms3+ "<div class='col-md'>" + "<input type='text' class=' form-control' id='courseg' name='graduatio course' placeholder='Graduaton Course'>"+"</div>"
+ms3=ms3+ "<div class='col-md'>" + "<input type='text' class=' form-control' id='branchg' name='branch' placeholder='Branch'>"+"</div>"
+ms3=ms3+"<div class='col-md'>"+"<input type='text' class=' form-control' id='markg' name='mark' placeholder='Marks'>"+"</div>"
+ms3=ms3+"<div class='col-md'>"+"<input type='text' class=' form-control' id='yrg' name='yr' placeholder='Passing Year'>"+"</div>"
+ms3=ms3+"<button class='col-md btn-block' id='dag' name='sid'"+"type='button'>Save</button>"
+ms3=ms3+"<button class='col-md btn-block' id='removeg' name='sid'"+ "type='button'>Remove</button>"
+             
+ms4=ms4+"<select id='select' class='browser-default custom-select'>" 
+ms4=ms4+ "<option selected>Select Class</option>"
+ms4=ms4+"<option value='10th'>10th</option>"
+ms4=ms4+ "<option value='12th'>12th</option>"
+ms4=ms4+"<option value='Diploma'>Diploma</option>"
+ms4=ms4+" <option value='Graduation'>Graduation</option>"
+ms4=ms4+" <option value='Post Graduation'>Post Graduation</option>"+"</select>"
+
+var cla,marks,yr,branch;
+    $("#add123").click(function(){
+        $("#detail").html(ms4);
+    
+         //Increment field counter
+         
+         
+         var listener = 
+
+
+         
+            function(e){
+                // e.preventDefault();
+                var s=$(this).val();
+                if(x < 6){ 
+         
+                 x++;
+               
+              //  var va = $(this).children("option:selected").val();
+               var stuid=$("#he").val();
+               console.log(stuid);
+                if(s=="10th"){
+                    $("#10").html(ms0);
+                    $("input").blur(function(){
+                    cla=s;
+                    marks=$("#mark10").val();
+                    yr=$("#yr10").val();
+                    console.log(marks,cla,yr);
+                    });
+
+               $("#da10").click(function(){                    
+                  $.ajax({
+                         type: "POST",
+ 	                url: "/app/register2",
+ 	                data: {
+                     cla : s,
+                     marks:marks,
+                     yr:yr,
+                     stuid:stuid,
+
+		
+ 	                },success: function(data) {
+                        alert(data);
+                    }
+                });
+            });
+
+
+                }
+                else if (s=="12th") {
+                    $("#12").html(ms1);
+                    $("input").blur(function(){
+                    cla=s;
+                    marks=$("#mark12").val();
+                    yr=$("#yr12").val();
+                    console.log(marks,cla,yr);
+                    });
+
+               $("#da12").click(function(){                    
+                  $.ajax({
+                         type: "POST",
+ 	                url: "/app/register2",
+ 	                data: {
+                     cla : s,
+                     marks:marks,
+                     yr:yr,
+                     stuid:stuid,
+
+		
+ 	                },success: function(data) {
+                        alert(data);
+ 
+		            	
+ 	}
+  });
+});
+
+
+
+ 
+                }
+                else if (s=="Diploma") {
+                    $("#diploma").html(ms2);
+                    $("input").blur(function(){
+                     cla=s;
+                     course=$("#coursed").val();
+                     branch=$("#branchd").val();
+                     marks=$("#markd").val();
+                     yr=$("#yrd").val();
+                   // console.log(yr);
+                   console.log(course);
+                    console.log(marks,branch,yr);
+});
+               
+               $("#dad").click(function(){  
+                  $.ajax({
+                  type: "POST",
+ 	                url: "/app/register2",
+ 	                data: {
+                     cla : s,
+                     marks:marks,
+                     yr:yr,
+                     stuid:stuid,
+                     branch:branch,
+                     course:course
+
+		
+ 	                },success: function(data) {
+                        alert(data);
+
+		            	
+ 	}
+  });
+});
+
+
+                }
+
+
+
+                else {
+                    $("#graduate").html(ms3);
+                    $("input").blur(function(){
+                     cla=s;
+                     course=$("#courseg").val();
+                     branch=$("#branchg").val();
+                     marks=$("#markg").val();
+                     yr=$("#yrg").val();
+                   // console.log(yr);
+                   console.log(course);
+                    console.log(marks,branch,yr);
+});
+               
+               $("#dag").click(function(){  
+                  $.ajax({
+                  type: "POST",
+ 	                url: "/app/register2",
+ 	                data: {
+                     cla : s,
+                     marks:marks,
+                     yr:yr,
+                     stuid:stuid,
+                     branch:branch,
+                     course:course
+
+		
+ 	                },success: function(data) {
+                        alert(data);
+
+		            	
+ 	}
+  });
+});
+
+
+
+
+                }
+            }
+// $("#10").on("click","#remove10", function(e){ //user click on remove field
+// e.preventDefault(); $(this).parent('div').detach(); x--;
+// })
+
+//  $("#12").on("click","#remove12", function(e){ //user click on remove field
+// e.preventDefault(); $(this).parent('div').remove(); x--;
+// })
+
+//  $("#diploma").on("click","#removed", function(e){ //user click on remove field
+// e.preventDefault(); $(this).parent('div').remove(); x--;
+// })
+
+//  $("#graduate").on("click","#removeg", function(e){ //user click on remove field
+// e.preventDefault(); $(this).parent('div').remove(); x--;
+// })
+
+$('#remove10,#remove12,#removeg,#removed').click(function(){
+    $(this).parent().html("");
+    $("#select").on('change',listener);
+    x--;
+})
+
+};
+
+$("#select").on('change',listener);
+           
+       
+
+
+});
+
+});
+</script>
+  </html>
